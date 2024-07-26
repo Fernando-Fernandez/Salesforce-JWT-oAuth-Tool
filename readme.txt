@@ -2,6 +2,8 @@ Question: What is this for?
 
 Answer: When configuring a Salesforce Connected app to use certificates to authenticate you will use JSON Web Tokens to authenticate. This application can take your certificate's key file and sign a request to create a JWT. That JWT can then be used to sign HTTP requests to your Salesforce connected app and interact with it. This application assumes you already have your connected app configured as outlined at https://salesforcecentral.com/accessing-salesforce-with-jwt-oauth-flow/
 
+(make sure to set the Callback URL in the connected app to https://oauthdebugger.com/debug )
+
 This application also allows you to authorize a user to use the given connected app. By default if your user has not logged in and you attempt to use the connected app you will recieve an error 
 
 {"error":"invalid_grant","error_description":"user hasn't approved this consumer"}
